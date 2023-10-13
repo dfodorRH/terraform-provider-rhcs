@@ -1,0 +1,15 @@
+apiVersion: tekton.dev/v1beta1
+kind: Task
+metadata:
+  name: extract_binaries
+spec:
+  workspaces:
+  - name: releases
+    workspace: workspace
+  steps:
+    - name : prepare_release
+      taskRef:
+        name : prepare_release
+    - name : extract
+      script: |
+        ls -la
