@@ -1,13 +1,13 @@
 apiVersion: tekton.dev/v1beta1
 kind: Task
 metadata:
-  name: extract_binaries
+  name: extract-binaries
 spec:
   workspaces:
   - name: releases
     workspace: workspace
   steps:
-    - name : extract_binaries
+    - name : extract-binaries
       script: |
         ls -la
         cp *.zip *.json *.sig /workspace/releases
