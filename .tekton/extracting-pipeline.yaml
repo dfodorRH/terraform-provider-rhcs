@@ -3,9 +3,6 @@ kind: Pipeline
 metadata:
   name: extractor
 spec:
-  workspaces:
-  - name: releases
-    workspace: workspace
   tasks:
     - name : prepare-release
       taskRef:
