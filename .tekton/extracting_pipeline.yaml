@@ -1,0 +1,15 @@
+apiVersion: tekton.dev/v1beta1
+kind: Pipeline
+metadata:
+  name: the_extractor
+spec:
+  workspaces:
+  - name: releases
+    workspace: workspace
+  tasks:
+    - name : prepare_release
+      taskRef:
+        name : prepare_release
+    - name: extract_binaries
+      taskRef:
+        name: extract_binaries
