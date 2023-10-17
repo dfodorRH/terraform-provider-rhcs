@@ -9,18 +9,18 @@ spec:
       resolver: bundles
       params:
       - name: bundle
-	value: quay.io/dfodor/extracting-bundle@sha256:e5bf14d05789acaac25f80e5a91bbd68e74bce90e37db0642736fcda3d1c50ce 
+        value: quay.io/dfodor/extracting-bundle@sha256:e5bf14d05789acaac25f80e5a91bbd68e74bce90e37db0642736fcda3d1c50ce 
       - name: name
-	value: prepare-release
+        value: prepare-release
       - name: kind
-	value: task
+        value: task
   - name: extract-binaries
     taskRef:
       resolver: bundles
       params:
       - name: bundle
-	value: quay.io/dfodor/extracting-bundle@sha256:e5bf14d05789acaac25f80e5a91bbd68e74bce90e37db0642736fcda3d1c50ce
+        value: quay.io/dfodor/extracting-bundle@sha256:e5bf14d05789acaac25f80e5a91bbd68e74bce90e37db0642736fcda3d1c50ce
       - name: name
-	value: extract-binaries
+        value: extract-binaries
       - name: kind
-	value: task
+        value: task
