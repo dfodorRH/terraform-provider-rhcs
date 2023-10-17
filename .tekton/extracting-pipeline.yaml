@@ -15,15 +15,15 @@ spec:
       - name: kind
         value: task
       - name: version
-        value: 13.0
+        value: "13.0"
       - name: release-notes
-        type: string
+        value: "<release-notes>"
       - name: branch
-        type: string
+        value: "<branch>"
       - name: repo
         value: dfodorRH/terraform-provider-rhcs
       - name: rel_ver
-        value: 15.0
+        value: "15.0"
   - name: extract-binaries
     taskRef:
       resolver: bundles
