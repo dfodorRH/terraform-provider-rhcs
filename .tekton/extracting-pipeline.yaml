@@ -1,7 +1,7 @@
 apiVersion: tekton.dev/v1beta1
 kind: Pipeline
 metadata:
-  name: extractor
+  name: extracting-pipeline
 spec:
   tasks:
   - name: prepare-release
@@ -9,7 +9,7 @@ spec:
       resolver: bundles
       params:
       - name: bundle
-        value: quay.io/dfodor/extracting-bundle@sha256:e5bf14d05789acaac25f80e5a91bbd68e74bce90e37db0642736fcda3d1c50ce 
+        value: quay.io/dfodor/extracting-bundle@sha256:e5bf14d05789acaac25f80e5a91bbd68e74bce90e37db0642736fcda3d1c50ce
       - name: name
         value: prepare-release
       - name: kind

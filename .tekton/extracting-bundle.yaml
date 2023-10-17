@@ -20,7 +20,6 @@ spec:
   workspaces:
   - name: releases
     workspace: workspace
-
   params:
     - name: version
       description: Version of the release
@@ -37,7 +36,6 @@ spec:
     - name: rel_ver
       description: Custom version of release
       type: string
-
   steps:
     - name: prepare-release
       image: ubi9/go-toolset:latest
@@ -56,8 +54,3 @@ spec:
           value: $(params.repo)
         - name: REL_VER
           value: $(params.rel_ver)
----
-apiVersion: tekton.dev/v1beta1
-kind: Pipeline
-metadata:
-  name: extracting-pipeline.yaml
