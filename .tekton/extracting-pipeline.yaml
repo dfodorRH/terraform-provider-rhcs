@@ -6,6 +6,7 @@ spec:
   workspaces:
   - name: releases
     description: Workspace to place artifacts in
+    type: workspace
   tasks:
   - name: prepare-release
     taskRef:
@@ -28,6 +29,9 @@ spec:
         value: dfodorRH/terraform-provider-rhcs
       - name: rel_ver
         value: "15.0"
+    workspaces:
+      - name: releases
+        workspace: releases
   - name: extract-binaries
     taskRef:
       resolver: bundles
@@ -38,3 +42,8 @@ spec:
         value: extract-binaries
       - name: kind
         value: task
+    workspaces:
+      - name: releases
+        workspace: releases
+    runAfter:
+        - prepare-release
