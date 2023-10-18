@@ -14,6 +14,7 @@ spec:
         value: prepare-release
       - name: kind
         value: task
+    params:  
       - name: version
         value: "13.0"
       - name: release-notes
