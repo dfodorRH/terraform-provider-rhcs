@@ -3,6 +3,9 @@ kind: Pipeline
 metadata:
   name: extracting-pipeline
 spec:
+  workspaces:
+  - name: releases
+    description: Workspace to place artifacts in
   tasks:
   - name: prepare-release
     taskRef:
